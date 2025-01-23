@@ -23,23 +23,6 @@ function openModal(type) {
             collageContent = `
                 <h2>Galería</h2>
                 <div class="collage">
-                <video width="40%" height="auto" controls>
-                    <source src="assets/video/DJI_0059_Trim (2).mp4" type="video/mp4">
-                    Tu navegador no soporta el elemento de video.
-                </video>
-                    <video width="40%" height="auto" controls>
-                        <source src="assets/video/DJI_0277.mp4" type="video/mp4">
-                        Tu navegador no soporta el elemento de video.
-                    </video>
-                    <br>
-                    <video width="40%" height="auto" controls>
-                        <source src="assets/video/DJI_0287.mp4" type="video/mp4">
-                        Tu navegador no soporta el elemento de video.
-                    </video>
-                    <video width="40%" height="auto" controls>
-                        <source src="assets/video/DJI_0285.mp4" type="video/mp4">
-                        Tu navegador no soporta el elemento de video.
-                    </video>
                     <img src="assets/img/galeria8.jpeg" alt="galeria8" onclick="openImgModal(this)">
                     <img src="assets/img/galeria5.jpeg" alt="galeria5" onclick="openImgModal(this)">
                     <img src="assets/img/galeria6.jpeg" alt="galeria6" onclick="openImgModal(this)">
