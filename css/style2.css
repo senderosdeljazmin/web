@@ -1,0 +1,451 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inder', sans-serif !important;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    font-weight: normal; /* Quitala negrita */
+}
+
+.custom-navbar {
+    background-color: #EBE19B !important;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2em; /* Aumenta el tamaño de la letra */
+    color: black !important; /* Cambia el color de la letra a negro */
+}
+
+.navbar-nav .nav-link i {
+    font-size: 1.5em; /* Aumenta el tamaño de los iconos */
+    color: black !important; /* Cambia el color de los iconos a negro */
+}
+
+.navbar-logo {
+    height: 50px; /* Ajusta el tamaño del logo */
+    margin-right: 10px;
+}
+
+.navbar-logo-text {
+    height: 40px; /* Ajusta el tamaño del logo de texto */
+}
+
+.nav-link {
+    text-transform: none;
+}
+
+/* Hero section styles */
+.hero-section {
+    position: relative;
+    background-image: url('assets/img/fondo_head.png') !important;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo oscuro para mejorar la legibilidad del texto */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 6em;
+    margin: 6em;
+}
+
+.hero-content {
+    color: white;
+}
+
+.hero-content h1 {
+    text-align: center;
+    font-size: 3.6em;
+    margin-bottom: 20px;
+    font-weight: normal; /* Quitala negrita */
+    font-family: 'Inder', sans-serif !important;
+}
+
+.shop-button {
+    background-color: #3E7633;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.whatsapp-button {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: rgb(88, 230, 36);
+    color: #ffffff;
+    border: none;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-button i {
+    margin: 0;
+}
+
+/* Schedule section styles */
+.schedule-section {
+    background-color: #EBE19B;
+    text-align: center;
+    padding: 40px 0; /* Aumenta el padding para que la sección sea más grande */
+}
+
+.schedule-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Agrega un espacio entre el logo y el texto */
+}
+
+.schedule-logo {
+    height: 80px; /* Aumenta el tamaño del logo */
+    margin-right: 10px; /* Reducir el margen derecho para mover el logo más a la izquierda */
+}
+
+.schedule-text h5 {
+    color: #3E7633;
+    font-size: 1.5em;
+    font-weight: normal; /* Quitala negrita */
+    font-family: 'Inder', sans-serif !important;
+}
+
+/* Custom section for the provided design */
+.section-features {
+    background-color: #EBE19B;
+    padding: 2em;
+}
+
+.features-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.feature-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+}
+
+.feature-icon img {
+    max-width: 100px;
+    margin-bottom: 0.5em;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.large-text{
+    font-size: 1.1em; /* Ajusta el tamaño según sea necesario */
+}
+
+
+.buttons-container button {
+    background-color: #3E7633;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 0.5em;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+
+    .shop-button {
+        font-size: 1em;
+    }
+
+    .whatsapp-button {
+        font-size: 2em; /* Aumenta el tamaño del botón en pantallas pequeñas */
+        padding: 15px; /* Aumenta el padding en pantallas pequeñas */
+    }
+
+    .schedule-logo {
+        height: 60px; /* Ajusta el tamaño del logo para pantallas pequeñas */
+    }
+
+    .schedule-text p {
+        font-size: 0.9em;
+    }
+
+    /* Ajuste del tamaño del icono de WhatsApp en dispositivos móviles */
+    .whatsapp-button i {
+        font-size: 4em; /* Aumenta el tamaño del icono de WhatsApp en pantallas pequeñas */
+    }
+
+    #arbolimg {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .feature-icon img {
+        max-width: 50px; /* Ajusta el tamaño de los íconos según sea necesario */
+    }
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    text-align: center; /* Center text */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 990px) {
+    .modal-content {
+        margin-top: 20%; /* Ajusta este valor según sea necesario */
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .modal-content {
+        margin-top: 30%; /* Ajusta este valor según sea necesario */
+    }
+}
+
+@media screen and (max-width: 458px) {
+    .modal-content {
+        margin-top: 40%; /* Ajusta este valor según sea necesario */
+    }
+}
+
+.collage img {
+    margin: 5px;
+    width: calc(33% - 10px); /* Three images per row with some margin */
+}
+
+.close-modal-btn {
+    background-color: #3E7633;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold; 
+}
+
+@media (max-width: 768px) {
+    .buttons-container button {
+        width: 90%;
+        margin: 0.5em 0;
+    }
+    
+    .modal-content {
+        width: 95%;
+    }
+
+    .collage img {
+        width: calc(50% - 10px); /* Two images per row on smaller screens */
+    }
+}
+
+.text_smile {
+    font-size: 0.8em; /* Ajusta el tamaño del texto según sea necesario */
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.image-wrapper {
+    margin: 10px;
+    cursor: pointer;
+}
+
+.image-wrapper img {
+    max-width: 300px;
+    max-height: 230px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.1);
+}
+
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    margin: 3em;
+
+}
+
+.mapa_container {
+    display: flex;
+    justify-content: center;
+    margin: 3em 0;
+}
+
+.mapa_container img {
+    width: 60%;  /* Ajusta según tus necesidades */
+    margin: auto;
+    display: block;  /* Asegura que el margin auto funcione */
+}
+
+.img-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Fijo para que se mantenga en pantalla */
+    z-index: 1000; /* Sobre todo el contenido */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9); /* Fondo oscuro con transparencia */
+}
+
+.img-modal-content {
+    margin: 15em auto; /* Ajusta el valor según sea necesario */
+    display: block;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.img-modal-content:hover {
+    cursor: pointer;
+}
+
+.img-modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.img-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.img-modal-close:hover,
+.img-modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container_imagenes {
+    margin-top: 20px;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.imagenes_princi {
+    max-width: 70%; /* Ajusta la imagen al 100% del contenedor padre */
+    height: auto;
+    transition: transform 0.3s ease; /* Añade una transición para el efecto de agrandamiento */
+}
+
+.imagenes_princi:hover {
+    transform: scale(1.1); /* Agranda la imagen al 110% cuando el cursor pasa por encima */
+}
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.col-12.col-sm-4 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.btn-responsive {
+    width: 100%;
+    max-width: 250px;
+    background-color: #3E7633;
+    border: none;
+    height: 50px;
+    margin-top: 1.5em;
+}
