@@ -373,45 +373,41 @@ h2 {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.9); /* Fondo oscuro con transparencia */
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro con transparencia */
 }
 
 .img-modal-content {
-    margin: 15em auto; /* Ajusta el valor según sea necesario */
+    margin: 15em auto;
     display: block;
     width: 90%;
     max-width: 1000px;
 }
 
-.img-modal-content:hover {
+.img-modal-btn-close {
+    position: fixed; /* Fijo en la pantalla */
+    top: 21%; /* Ajusta según la altura que desees del botón */
+    left: 50%; /* Centra el botón horizontalmente */
+    transform: translateX(-50%);
+    background-color: #3E7633; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
+    z-index: 1001; /* Más alto que el modal */
+    transition: background-color 0.3s ease;
 }
 
-.img-modal-caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
+.img-modal-btn-close:hover {
+    background-color: #3E7633; /* Verde más oscuro al pasar el cursor */
 }
 
-.img-modal-close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.img-modal-close:hover,
-.img-modal-close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+/* Ajuste para pantallas menores de 458px */
+@media screen and (max-width: 458px) {
+    .img-modal-btn-close {
+        top: 23%; /* Baja un poco el botón en pantallas pequeñas */
+    }
 }
 
 .container_imagenes {
