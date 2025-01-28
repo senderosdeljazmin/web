@@ -62,11 +62,9 @@ function closeModal() {
 function openImgModal(element) {
     const imgModal = document.getElementById("imgModal");
     const imgModalContent = document.getElementById("imgModalContent");
-    const imgModalCaption = document.getElementById("imgModalCaption");
 
     imgModal.style.display = "block";
     imgModalContent.src = element.src;
-    imgModalCaption.innerHTML = element.alt;
 }
 
 function closeImgModal() {
