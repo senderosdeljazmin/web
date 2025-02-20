@@ -40,6 +40,16 @@ function openModal(type) {
                     <img src="assets/img/galeria1.png" alt="galeria1" onclick="openImgModal(this)">
                     <img src="assets/img/galeria2.png" alt="galeria2" onclick="openImgModal(this)">
                     <img src="assets/img/galeria3.png" alt="galeria3" onclick="openImgModal(this)">
+                    <img src="assets/img/plano_final.png" alt="plano_final" onclick="openImgModal(this)">
+                    <img src="assets/img/Final.png" alt="Final" onclick="openImgModal(this)">
+                    <img src="assets/img/p1.png" alt="p1" onclick="openImgModal(this)">
+                    <img src="assets/img/p2.png" alt="p2" onclick="openImgModal(this)">
+                    <img src="assets/img/p3.png" alt="p3" onclick="openImgModal(this)">
+                    <img src="assets/img/p4.png" alt="p4" onclick="openImgModal(this)">
+                    <img src="assets/img/p5.png" alt="p5" onclick="openImgModal(this)">
+                    <img src="assets/img/p6.png" alt="p6" onclick="openImgModal(this)">
+                    <img src="assets/img/p7.png" alt="p7" onclick="openImgModal(this)">
+                    <img src="assets/img/p8.png" alt="p8" onclick="openImgModal(this)">
                 </div>
                 <button class="close-modal-btn" onclick="closeModal()">Cerrar</button>
             `;
