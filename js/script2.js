@@ -69,16 +69,55 @@ function closeModal() {
 
 function openImgModal(element) {
     const imgModal = document.getElementById("imgModal");
-    const imgModalContent = document.getElementById("imgModalContent");
-
+    const imgCarouselInner = document.getElementById("imgCarouselInner");
+    
+    if (element.src.includes("mapa.jpeg")) {
+        imgModal.innerHTML = `
+            <span class="img-modal-close" onclick="closeImgModal()">×</span>
+            <img class="img-modal-content" src="${element.src}">
+            <button class="img-modal-btn-close" onclick="closeImgModal()">Cerrar</button>
+        `;
+    } else {
+        const images = Array.from(document.querySelectorAll(".collage img"));
+        imgCarouselInner.innerHTML = "";
+        
+        images.forEach((img, index) => {
+            const activeClass = img.src === element.src ? "active" : "";
+            imgCarouselInner.innerHTML += `
+                <div class="carousel-item ${activeClass}">
+                    <img src="${img.src}" class="img-modal-content">
+                </div>
+            `;
+        });
+        
+        imgModal.style.display = "block";
+    }
     imgModal.style.display = "block";
-    imgModalContent.src = element.src;
 }
+
 
 function closeImgModal() {
     const imgModal = document.getElementById("imgModal");
     imgModal.style.display = "none";
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const imgModal = document.getElementById("imgModal");
+    imgModal.innerHTML = `
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="imgCarouselInner"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <button class="img-modal-btn-close" onclick="closeImgModal()">Cerrar</button>
+        </div>
+    `;
+});
 
 window.onclick = function(event) {
     const modal = document.getElementById("myModal");
