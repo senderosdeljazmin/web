@@ -37,11 +37,9 @@ function openModal(type) {
             collageContent = `
                 <h2>Urbanismo</h2>
                 <div class="collage">
-                <img src="assets/img/galeria1.png" alt="galeria1" onclick="openImgModal(this)">
-                <img src="assets/img/galeria2.png" alt="galeria2" onclick="openImgModal(this)">
-                <img src="assets/img/galeria3.png" alt="galeria3" onclick="openImgModal(this)">
-                <img src="assets/img/mapeo.jpeg" alt="urbanismo1" onclick="openImgModal(this)">
-                <img src="assets/img/urbanismo1.png" alt="urbanismo1" onclick="openImgModal(this)">
+                    <img src="assets/img/galeria1.png" alt="galeria1" onclick="openImgModal(this)">
+                    <img src="assets/img/galeria2.png" alt="galeria2" onclick="openImgModal(this)">
+                    <img src="assets/img/galeria3.png" alt="galeria3" onclick="openImgModal(this)">
                 </div>
                 <button class="close-modal-btn" onclick="closeModal()">Cerrar</button>
             `;
