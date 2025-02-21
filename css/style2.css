@@ -321,6 +321,12 @@ h2 {
     font-size: 0.8em; /* Ajusta el tamaño del texto según sea necesario */
 }
 
+.Descripción p,
+.Descripción .large-text,
+.Descripción .text_smile {
+    text-align: justify;
+}
+
 .image-container {
     display: flex;
     justify-content: space-around;
