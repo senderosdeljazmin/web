@@ -71,7 +71,7 @@ function openImgModal(element) {
     const imgModal = document.getElementById("imgModal");
     const imgCarouselInner = document.getElementById("imgCarouselInner");
     
-    if (element.src.includes("mapa.jpeg")) {
+    if (element.src.includes("mapa.webp")) {
         imgModal.innerHTML = `
             <span class="img-modal-close" onclick="closeImgModal()">×</span>
             <img class="img-modal-content" src="${element.src}">

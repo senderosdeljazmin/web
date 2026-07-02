@@ -1,0 +1,52 @@
+# ============================================
+# Cache de archivos estáticos (Apache / mod_expires + mod_headers)
+# Colócalo en la raíz del sitio, junto a index.html
+# ============================================
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Imágenes
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png  "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # CSS / JS
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+
+  # Fuentes
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+
+  # PDFs
+  ExpiresByType application/pdf "access plus 1 month"
+
+  # HTML (que sí se revise cada vez, por si actualizas contenido)
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|jpg|jpeg|png|svg|ico|woff2|woff)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+# ============================================
+# Compresión Gzip/Brotli (reduce peso de transferencia)
+# ============================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# ============================================
+# Forzar que los nombres de archivo se comparen exactamente
+# (ayuda a detectar problemas de mayúsculas/minúsculas en pruebas locales
+# si usas un servidor Apache local con mod_speling desactivado)
+# ============================================
