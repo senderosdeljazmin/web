@@ -42,7 +42,7 @@ body {
 /* Hero section styles */
 .hero-section {
     position: relative;
-    background-image: url('assets/img/fondo_head.png') !important;
+    background-image: url('assets/img/fondo_head.webp') !important;
     background-size: cover;
     background-position: center;
     height: 100vh;
